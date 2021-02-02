@@ -1,0 +1,23 @@
+<?php
+
+require_once("../db.class.php");
+
+$objDb = new db();
+$link = $objDb->conecta_mysql();
+
+$sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id";
+
+$resultado = mysqli_query($link, $sql);
+
+
+if ($resultado) {
+    while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+        echo "<div class='list-group-item'>";
+        echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
+        echo "<h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2>";
+        echo "<p class='list-group-item-text'>" . "<b>" . $noticia["texto_noticia"] . "</b>" . "</p>";
+        echo "</div>";
+    }
+} else {
+    echo "Erro na consulta de noticias no banco de dados";
+}
