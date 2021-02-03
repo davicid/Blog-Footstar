@@ -38,7 +38,7 @@
                 //carregar os comentários
                 $.ajax({
                     url: "requisicoes_ajax/requisicao_comentarios.php",
-                    success: function noticias(data) {
+                    success: function comentarios(data) {
                         $("#comentarios").html(data);
                     }
                 });
