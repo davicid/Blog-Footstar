@@ -14,7 +14,6 @@
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-
     <script type="text/javascript">
         $(document).ready(function() {
 
@@ -23,7 +22,7 @@
                 if ($("#texto_comentario").val().length > 0) {
 
                     $.ajax({
-                        url: "get/get_comentarios.php",
+                        url: "get_comentarios.php",
                         method: "post",
                         data: $("#inserir_comentarios").serialize(),
                         success: function(data) {
@@ -58,7 +57,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form id="inserir_comentarios" class="input-group">
-                            <textarea type="text" id="texto_comentario" name="texto_comentario" placeholder="Insira um  comentário" maxlength="600" class="formato_resumo"></textarea>
+                            <textarea id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="600" class="formato_resumo"></textarea>
                             <br><br>
                             <spam class="botao">
                                 <button class=" btn btn-primary" id="btn_comentario" type="button">Comentar</button>
