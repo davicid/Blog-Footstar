@@ -6,7 +6,7 @@ if (!isset($_SESSION["usuario"])) {
     header("Location: index.php?erro=1");
 }
 
-require_once("db.class.php");
+require_once("../db.class.php");
 
 $titulo_noticia = $_POST["titulo_noticia"];
 $texto_noticia = $_POST["texto_noticia"];

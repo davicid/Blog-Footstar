@@ -7,7 +7,7 @@ if (!isset($_SESSION["usuario"])) {
 }
 
 
-require_once("../db.class.php");
+require_once("db.class.php");
 
 $texto_comentario = $_POST["texto_comentario"];
 $id_usuario = $_SESSION["id_usuario"];
