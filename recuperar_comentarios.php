@@ -24,3 +24,5 @@ function comentarios($id_noticia)
         echo "Erro na consulta de noticias no banco de dados";
     }
 }
+
+comentarios($id_noticia);
