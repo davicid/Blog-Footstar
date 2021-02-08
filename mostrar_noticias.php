@@ -31,21 +31,13 @@ session_start();
             <div class="row">
                 <div class="col">
                     <?php
+                    $tipo_noticia = $_GET['tipo_noticia'];
                     require_once("recuperar_noticias.php");
-                    fedeBrasileira();
+                    mostrarNoticias($tipo_noticia);
                     ?>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section>
-        <?php
-
-        if (isset($_SESSION["usuario"])) {
-            require_once("estilo_pagina/comentarios.php");
-        }
-        ?>
     </section>
 
     <!-- Rodape -->

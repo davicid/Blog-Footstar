@@ -33,7 +33,7 @@ if (!isset($_SESSION["usuario"]) || (!($_SESSION["tipo_usuario"] == "jornalista"
                 if ($("#titulo_noticia").val().length > 0 && $("#texto_noticia").val().length > 0 && $("#tipo_noticia").val().length != "") {
 
                     $.ajax({
-                        url: "get/get_noticias.php",
+                        url: "inserir/inserir_noticias.php",
                         method: "post",
                         data: $("#inserir_noticia").serialize(),
                         success: function(data) {

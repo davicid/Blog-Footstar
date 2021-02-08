@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,34 +28,32 @@
                 if ($("#texto_comentario").val().length > 0) {
 
                     $.ajax({
-                        url: "get_comentarios.php",
+                        url: "inserir/inserir_comentarios.php",
                         method: "post",
                         data: $("#inserir_comentarios").serialize(),
                         success: function(data) {
                             $("#texto_comentario").val("");
-                            atualizaComentario();
                         }
                     });
                 }
             });
-
-            function atualizaComentario() {
-                //carregar os comentários
-                $.ajax({
-                    url: "requisicoes_ajax/requisicao_comentarios.php",
-                    success: function comentarios(data) {
-                        $("#comentarios").html(data);
-                    }
-                });
-            }
-
-            atualizaComentario();
         });
     </script>
 
 </head>
 
 <body>
+
+    <?php
+    require_once("estilo_pagina/barra_navegacao.php");
+    require_once("estilo_pagina/capa.php");
+
+    $id_noticia = $_GET['id_noticia'];
+    require_once("recuperar_noticias.php");
+    paginaNoticia($id_noticia);
+
+    ?>
+
     <article class="container" id="area_insercao">
         <section class="row">
             <div class="col-md-3 center"></div>
@@ -57,7 +61,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form id="inserir_comentarios" class="input-group">
-                            <textarea id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="600" class="formato_resumo"></textarea>
+                            <input type="hidden" id="id_noticia" name="id_noticia" value=<?= $id_noticia ?>>
+                            <textarea id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="1000" class="formato_resumo"></textarea>
                             <br><br>
                             <spam class="botao">
                                 <button class=" btn btn-primary" id="btn_comentario" type="button">Comentar</button>
@@ -68,6 +73,7 @@
             </div>
         </section>
 
+
         <section>
             <div class="texto_noticias">
                 <div id="comentarios" class="list-group"></div>
@@ -75,8 +81,17 @@
         </section>
     </article>
 
+
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
+
+<?php
+
+require_once("recuperar_comentarios.php");
+comentarios($id_noticia);
+
+?>

@@ -43,15 +43,15 @@ session_start();
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-6 col-lg-4">
-					<a href="ultimas_atualizacoes.php"><img src="imagens/tutoriais.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive">
 						<b id="posicionamento1">Ultimas Atualizações</b></a>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<a href="fede_brasileira.php"><img src="imagens/fede_br.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive">
 						<b id="posicionamento2">Federação Brasileira</b></a>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<a href="tutoriais.php"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
 						<b id="posicionamento3">Tutoriais</b></a>
 				</div>
 			</div> <!-- row -->
@@ -59,15 +59,15 @@ session_start();
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-6 col-lg-4">
-					<a href="comp_nacionais.php"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
 						<b id="posicionamento4">Competições Nacionais</b></a>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<a href="comp_internacionais.php"><img src="imagens/comp_internacionais.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive">
 						<b id="posicionamento5">Competições Internacionais</b></a>
 				</div>
 				<div class="col-sm-6 col-lg-4">
-					<a href="sele_brasileira.php"><img src="imagens/sele_br.png" class="logo img-responsive">
+					<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive">
 						<b id="posicionamento6">Seleção Brasileira</b></a>
 				</div>
 			</div> <!-- row -->
