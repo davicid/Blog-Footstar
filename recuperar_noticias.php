@@ -2,7 +2,6 @@
 
 function paginaNoticia($id_noticia)
 {
-    echo $id_noticia;
     require_once("db.class.php");
 
     $objDb = new db();
@@ -24,7 +23,6 @@ function paginaNoticia($id_noticia)
     } else {
         echo "Erro na consulta de noticias no banco de dados";
     }
-    return $id_noticia;
 }
 
 function mostrarNoticias($tipo_noticia)
