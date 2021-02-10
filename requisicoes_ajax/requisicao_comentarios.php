@@ -15,9 +15,12 @@ $resultado = mysqli_query($link, $sql);
 
 if ($resultado) {
     while ($comentario = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+        echo "<div class='container'>";
         echo "<div class='list-group-item'>";
         echo "<h4 class='list-group-item-heading'>" . $comentario['nome'] . " <small> - " . $comentario['data_inclusao'] . "</small></h4>";
         echo "<p class='list-group-item-text'>" . "<b>" . $comentario["comentario"] . "</b>" . "</p>";
+        echo "<br/><br/>";
+        echo "</div>";
         echo "</div>";
     }
 } else {

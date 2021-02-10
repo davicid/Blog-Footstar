@@ -26,18 +26,12 @@ session_start();
 
 
     <!-- Seção -->
-    <section class="area_noticias">
-        <div class="container texto_noticias">
-            <div class="row">
-                <div class="col">
-                    <?php
-                    $tipo_noticia = $_GET['tipo_noticia'];
-                    require_once("recuperar_noticias.php");
-                    mostrarNoticias($tipo_noticia);
-                    ?>
-                </div>
-            </div>
-        </div>
+    <section class="texto_noticias">
+        <?php
+        $tipo_noticia = $_GET['tipo_noticia'];
+        require_once("recuperar_noticias.php");
+        mostrarNoticias($tipo_noticia);
+        ?>
     </section>
 
     <!-- Rodape -->

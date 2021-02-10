@@ -69,35 +69,31 @@ session_start();
     paginaNoticia($id_noticia);
     ?>
 
-    <article class="container" id="area_insercao">
-        <section class="row">
-            <div class="col-md-3 center"></div>
-            <div class="col-md-5 center">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <form id="inserir_comentarios" class="input-group">
-                            <input type="hidden" id="id_noticia" name="id_noticia" value=<?= $id_noticia ?>>
-                            <textarea id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="1000" class="formato_resumo"></textarea>
-                            <br><br>
-                            <spam class="botao">
-                                <button class=" btn btn-primary" id="btn_comentario" type="button">Comentar</button>
-                            </spam>
-                        </form>
-                    </div>
-                </div>
+
+    <section class="container">
+        <div class=" col-md-3 center"></div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form id="inserir_comentarios" class="input-group-md mb-12">
+                    <input type="hidden" id="id_noticia" name="id_noticia" value=<?= $id_noticia ?>>
+                    <textarea class="form-control" id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="600" rows="8" cols="65" class="area_comentarios"></textarea>
+                    <br>
+                    <spam>
+                        <button class="btn btn-primary" id="btn_comentario" type="button">Comentar</button>
+                    </spam>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <section>
-            <div class="texto_noticias">
-                <div id="comentarios" class="list-group"></div>
-            </div>
-        </section>
-    </article>
+    <section class="area_comentarios">
+        <div id="comentarios"></div>
+    </section>
 
-
-
+    <?php
+    require_once("estilo_pagina/rodape.php");
+    ?>
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

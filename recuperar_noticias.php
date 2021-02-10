@@ -13,12 +13,12 @@ function paginaNoticia($id_noticia)
 
     if ($resultado) {
         while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
-            echo "<div class='list-group-item'>";
+            echo "<div class='list-group-item texto_noticias'>";
             echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
             echo "<h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
             echo "<p class='list-group-item-text'>" . "<b>" . $noticia["texto_noticia"] . "</b>" . "</p>";
             echo "</div>";
-            echo "<br/><br/>";
+            echo "<br/>";
         }
     } else {
         echo "Erro na consulta de noticias no banco de dados";
@@ -45,6 +45,7 @@ function mostrarNoticias($tipo_noticia)
             echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
             echo "<p class='list-group-item-text'>" . "<b>" . $noticia["texto_noticia"] . "</b>" . "</p>";
             echo "</div>";
+            echo "<br/><br/>";
         }
     } else {
         echo "Erro na consulta de noticias no banco de dados";

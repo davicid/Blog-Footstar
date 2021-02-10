@@ -140,31 +140,20 @@ a:hover{
 
 /* =========Inserção de notíticas =========*/
 
-.formato_titulo{
-	height: 40px;
-	width: 350px;
-	font-size: 22px;
-	font-family: "Times New Roman", Times, serif;
-	vertical-align: middle;
-}
-
-.formato_resumo{
-	padding-bottom: 300px;
-	font-size: 18px;
-	font-family: "Times New Roman", Times, serif;
-	vertical-align: middle;
-	width: 350px;
-
-}
-
-.botao{
-	padding-left: 140px;
-}
-
-
-#area_insercao{
+.area_insercao{
 	background: #F2F0F0;
-	padding-top: 100px;
+	padding: 100px 0px 50px 0px;
 }
 
 
+/* =========Inserção de comentarios =========*/
+
+.area_comentarios{
+	margin-top: 10px;
+	color: #324759;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.borda{
+	border: 1px solid black;
+}
