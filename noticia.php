@@ -38,6 +38,20 @@ session_start();
                     });
                 }
             });
+
+            function atualizaNoticia() {
+                //carregar as notícias
+                $.ajax({
+                    url: "requisicoes_ajax/requisicao_comentarios.php",
+                    method: "post",
+                    data: $("#inserir_comentarios").serialize(),
+                    success: function comentarios(data) {
+                        $("#comentarios").html(data);
+                    }
+                });
+            }
+
+            atualizaNoticia();
         });
     </script>
 
@@ -49,14 +63,12 @@ session_start();
     require_once("estilo_pagina/barra_navegacao.php");
     require_once("estilo_pagina/capa.php");
 
-    if (isset($_GET['id_noticia']) != NULL) {
-        $id_noticia = $_GET['id_noticia'];
-        require_once("recuperar_noticias.php");
-        paginaNoticia($id_noticia);
-    } else {
-        header("Location: index.php");
-    }
+
+    $id_noticia = $_GET['id_noticia'];
+    require_once("recuperar_noticias.php");
+    paginaNoticia($id_noticia);
     ?>
+
     <article class="container" id="area_insercao">
         <section class="row">
             <div class="col-md-3 center"></div>
@@ -80,9 +92,6 @@ session_start();
         <section>
             <div class="texto_noticias">
                 <div id="comentarios" class="list-group"></div>
-                <?php
-                require_once("recuperar_comentarios.php");
-                ?>
             </div>
         </section>
     </article>
