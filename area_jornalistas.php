@@ -62,7 +62,7 @@ require_once("estilo_pagina/barra_navegacao.php");
                 <br><br>
                 <input class="form-control" type="text" id="titulo_noticia" name="titulo_noticia" placeholder="Insira o título da notícia" maxlength="100">
                 <br><br>
-                <textarea class="form-control" type="text" id="texto_noticia" name="texto_noticia" placeholder="Insira o resumo da notícia" maxlength="2000" rows="10"></textarea>
+                <textarea class="form-control" type="text" id="texto_noticia" name="texto_noticia" placeholder="Insira o resumo da notícia" maxlength="5000" rows="10"></textarea>
                 <br>
                 <spam class="botao">
                     <button class=" btn btn-primary" id="btn_noticia" type="button">Enviar</button>

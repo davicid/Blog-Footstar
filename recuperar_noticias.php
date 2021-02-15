@@ -43,7 +43,6 @@ function mostrarNoticias($tipo_noticia)
             echo "<div class='list-group-item'>";
             echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
             echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
-            echo "<p class='list-group-item-text'>" . "<b>" . $noticia["texto_noticia"] . "</b>" . "</p>";
             echo "</div>";
             echo "<br/><br/>";
         }
