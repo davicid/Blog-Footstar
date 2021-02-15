@@ -17,7 +17,6 @@ paginaNoticia($id_noticia);
 <script type="text/javascript">
     $(document).ready(function() {
 
-        //associar o evento de click ao botão
         $("#btn_comentario").click(function() {
             if ($("#texto_comentario").val().length > 0) {
 
@@ -34,7 +33,6 @@ paginaNoticia($id_noticia);
         });
 
         function atualizaNoticia() {
-            //carregar as notícias
             $.ajax({
                 url: "requisicoes_ajax/requisicao_comentarios.php",
                 method: "post",

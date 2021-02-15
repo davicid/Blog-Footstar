@@ -13,7 +13,7 @@ $link = $objDb->conecta_mysql();
 $usuario_existe = false;
 $email_existe = false;
 
-//verificar se usuário já existe
+
 $sql = "select * from usuarios where usuario = '$usuario'";
 if ($resultado_id = mysqli_query($link, $sql)) {
 
@@ -28,7 +28,7 @@ if ($resultado_id = mysqli_query($link, $sql)) {
 }
 
 
-//verificar se email já existe
+
 $sql = "select * from usuarios where email = '$email'";
 if ($resultado_id = mysqli_query($link, $sql)) {
 
@@ -62,7 +62,6 @@ $sql = "insert into usuarios(nome,usuario,email,senha) values ('$nome_usuario','
 
 $retorno_get = "";
 
-//executar a query
 if (mysqli_query($link, $sql)) {
     $retorno_get .= "usuario_cadastrado=1&";
     header("Location: cadastrese.php?" . $retorno_get);

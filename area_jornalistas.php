@@ -15,7 +15,6 @@ require_once("estilo_pagina/barra_navegacao.php");
 <script type="text/javascript">
     $(document).ready(function() {
 
-        //associar o evento de click ao botão
         $("#btn_noticia").click(function() {
             if ($("#titulo_noticia").val().length > 0 && $("#texto_noticia").val().length > 0 && $("#tipo_noticia").val().length != "") {
 
@@ -34,7 +33,6 @@ require_once("estilo_pagina/barra_navegacao.php");
         });
 
         function atualizaNoticia() {
-            //carregar as notícias
             $.ajax({
                 url: "requisicoes_ajax/requisicao_noticias.php",
                 success: function noticias(data) {

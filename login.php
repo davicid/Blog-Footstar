@@ -12,10 +12,9 @@ $erro = isset($_GET["erro"]) ? $_GET["erro"] : 0;
 
     <title>Twitter clone</title>
 
-    <!-- jquery - link cdn -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-    <!-- Bootstrap -->
+
     <link href="bootstrap/scss/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
@@ -23,7 +22,6 @@ $erro = isset($_GET["erro"]) ? $_GET["erro"] : 0;
         $(document).ready(function() {
 
 
-            //verificar se os campos de usuário e senha foram devidamente preenchidos
             $('#btn_login').click(function() {
 
                 var campo_vazio = false;

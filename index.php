@@ -6,8 +6,6 @@ require_once("estilo_pagina/barra_navegacao.php");
 require_once("estilo_pagina/capa.php");
 ?>
 
-
-<!-- Seção -->
 <section class="area_secao">
 	<div class="container area_introducao">
 		<h1><b>Introdução ao Footstar</b></h1>
@@ -34,9 +32,8 @@ require_once("estilo_pagina/capa.php");
 				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
 					<b id="posicionamento3">Tutoriais</b></a>
 			</div>
-		</div> <!-- row -->
+		</div>
 
-		<!-- row -->
 		<div class="row">
 			<div class="col-sm-6 col-lg-4">
 				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
@@ -50,10 +47,9 @@ require_once("estilo_pagina/capa.php");
 				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive">
 					<b id="posicionamento6">Seleção Brasileira</b></a>
 			</div>
-		</div> <!-- row -->
+		</div>
 
 	</div>
 </section>
 
-<!-- Rodape -->
 <?php require_once("estilo_pagina/rodape.php"); ?>

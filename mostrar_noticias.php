@@ -7,8 +7,6 @@ session_start();
 <?php require_once("estilo_pagina/barra_navegacao.php"); ?>
 <?php require_once("estilo_pagina/capa.php"); ?>
 
-
-<!-- Seção -->
 <section class="texto_noticias">
     <?php
     $tipo_noticia = $_GET['tipo_noticia'];
@@ -17,5 +15,4 @@ session_start();
     ?>
 </section>
 
-<!-- Rodape -->
 <?php require_once("estilo_pagina/rodape.php"); ?>

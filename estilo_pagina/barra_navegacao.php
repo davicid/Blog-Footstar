@@ -7,14 +7,12 @@
 
     <title>Blog Footstar</title>
 
-    <!-- Bootstrap -->
     <link href="bootstrap/scss/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 </head>
-
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="menu_navegacao">
@@ -45,13 +43,3 @@
             </ul>
         </div>
     </nav>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>

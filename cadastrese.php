@@ -15,10 +15,8 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
     <title>Blog Footstar</title>
 
-    <!-- jquery - link cdn -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-    <!-- Bootstrap -->
     <link href="bootstrap/scss/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
