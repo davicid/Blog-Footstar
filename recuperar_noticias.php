@@ -7,7 +7,7 @@ function paginaNoticia($id_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -17,7 +17,7 @@ function paginaNoticia($id_noticia)
             echo "<div class='list-group-item texto_noticias'>";
             echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
             echo "<h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
-            echo "<p class='list-group-item-text'>" . "<b>" . $noticia["texto_noticia"] . "</b>" . "</p>";
+            echo "<p class='list-group-item-text'>" . "<b>" . nl2br($noticia["texto_noticia"]) . "</b>" . "</p>";
 
             if (!isset($_SESSION["usuario"]) || (!($_SESSION["tipo_usuario"] == "jornalista") && !($_SESSION["tipo_usuario"] == "administrador"))) {
             } else {
@@ -43,7 +43,7 @@ function mostrarNoticias($tipo_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.id, n.titulo, n.texto_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND tipo_noticia = $tipo_noticia AND n.ativo = 1";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.id, n.titulo, n.texto_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND tipo_noticia = $tipo_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -69,7 +69,7 @@ function editarNoticia($id_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -106,5 +106,36 @@ function editarNoticia($id_noticia)
             echo "</div>";
             echo "</section>";
         }
+    } else {
+        echo "Erro na consulta de noticias no banco de dados";
+    }
+}
+
+function ultimasNoticia()
+{
+    require_once("db.class.php");
+
+    $objDb = new db();
+    $link = $objDb->conecta_mysql();
+
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.ativo = 1 ORDER BY data_inclusao DESC";
+
+    $resultado = mysqli_query($link, $sql);
+
+    if ($resultado) {
+        $i = 1;
+        while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+            if ($i <= 10) {
+                $id_noticia = $noticia['id'];
+                echo "<div class='list-group-item'>";
+                echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
+                echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
+                echo "</div>";
+                echo "<br>";
+                $i++;
+            }
+        }
+    } else {
+        echo "Erro na consulta de noticias no banco de dados";
     }
 }

@@ -17,7 +17,11 @@ require_once("estilo_pagina/capa.php");
 
 <section class="area_secao">
 	<div class="container">
-		<h1 class="texto_noticias"><b>Notícias</b></h1>
+		<h1 class="texto_noticias"><b>Últimas Notícias</b></h1>
+		<?php
+		require_once('recuperar_noticias.php');
+		ultimasNoticia();
+		?>
 		<!-- row -->
 		<div class="row">
 			<div class="col-sm-6 col-lg-4">
