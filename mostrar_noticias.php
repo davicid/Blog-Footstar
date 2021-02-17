@@ -7,7 +7,7 @@ session_start();
 <?php require_once("estilo_pagina/barra_navegacao.php"); ?>
 <?php require_once("estilo_pagina/capa.php"); ?>
 
-<section class="texto_noticias">
+<section>
     <?php
     $tipo_noticia = $_GET['tipo_noticia'];
     require_once("recuperar_noticias.php");

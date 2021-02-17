@@ -15,9 +15,11 @@ function paginaNoticia($id_noticia)
         while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
             $id_noticia = $noticia['id'];
             echo "<div class='list-group-item texto_noticias'>";
-            echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
-            echo "<h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
-            echo "<p class='list-group-item-text'>" . "<b>" . nl2br($noticia["texto_noticia"]) . "</b>" . "</p>";
+            echo "<h3 class='list-group-item-heading nome_jornalista'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h3>";
+            echo "<hr>";
+            echo "<h1 class='list-group-item-heading titulo_noticias'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h1></a>";
+            echo "<hr>";
+            echo "<p class='list-group-item-text texto_noticias'>" . "<b>" . nl2br($noticia["texto_noticia"]) . "</b>" . "</p>";
 
             if (!isset($_SESSION["usuario"]) || (!($_SESSION["tipo_usuario"] == "jornalista") && !($_SESSION["tipo_usuario"] == "administrador"))) {
             } else {
@@ -52,8 +54,8 @@ function mostrarNoticias($tipo_noticia)
         while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
             $id_noticia = $noticia['id'];
             echo "<div class='list-group-item'>";
-            echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
-            echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
+            echo "<h3 class='list-group-item-heading nome_jornalista'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h3>";
+            echo "<a href='noticia.php?id_noticia=$id_noticia'><h1 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h1></a>";
             echo "</div>";
             echo "<br/><br/>";
         }
@@ -128,8 +130,7 @@ function ultimasNoticia()
             if ($i <= 10) {
                 $id_noticia = $noticia['id'];
                 echo "<div class='list-group-item'>";
-                echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
-                echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
+                echo "<a href='noticia.php?id_noticia=$id_noticia'><h4 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h4></a>";
                 echo "</div>";
                 echo "<br>";
                 $i++;

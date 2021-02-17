@@ -14,7 +14,7 @@ if ($resultado) {
     while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
         $id_noticia = $noticia['id'];
         echo "<div class='list-group-item'>";
-        echo "<h4 class='list-group-item-heading'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
+        echo "<h4 class='list-group-item-heading nome_jornalista'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h4>";
         echo "<a href='noticia.php?id_noticia=$id_noticia'><h2 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h2></a>";
         echo '<hr>';
         echo "<p class='list-group-item-text'>" . "<b>" . nl2br($noticia["texto_noticia"]) . "</b>" . "</p>";

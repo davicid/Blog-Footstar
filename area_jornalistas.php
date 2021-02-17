@@ -34,24 +34,12 @@ require_once("estilo_pagina/barra_navegacao.php");
 
         function atualizaNoticia() {
             $.ajax({
-                url: "requisicoes_ajax/mostrar_noticias.php",
+                url: "requisicoes_ajax/get_noticias.php",
                 success: function noticias(data) {
                     $("#noticias").html(data);
                 }
             });
         }
-
-        $("#btn_remover").click(function() {
-            $.ajax({
-                url: "requisicoes_ajax/remover_noticia.php",
-                method: "post",
-                data: $("#remover_noticia").serialize(),
-                success: function(data) {
-                    window.location.href = "index.php";
-                }
-            });
-        });
-
         atualizaNoticia();
     });
 </script>
@@ -84,7 +72,7 @@ require_once("estilo_pagina/barra_navegacao.php");
 </section>
 
 <section>
-    <div class="texto_noticias">
+    <div class>
         <div id="noticias" class="list-group"></div>
     </div>
 </section>

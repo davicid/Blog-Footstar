@@ -33,7 +33,7 @@ paginaNoticia($id_noticia);
 
         function atualizaNoticia() {
             $.ajax({
-                url: "requisicoes_ajax/mostrar_comentarios.php",
+                url: "requisicoes_ajax/get_comentarios.php",
                 method: "post",
                 data: $("#inserir_comentarios").serialize(),
                 success: function comentarios(data) {
