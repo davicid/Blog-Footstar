@@ -8,7 +8,6 @@ session_start();
 require_once("estilo_pagina/barra_navegacao.php");
 require_once("estilo_pagina/capa.php");
 
-
 $id_noticia = $_GET['id_noticia'];
 require_once("recuperar_noticias.php");
 paginaNoticia($id_noticia);
@@ -34,7 +33,7 @@ paginaNoticia($id_noticia);
 
         function atualizaNoticia() {
             $.ajax({
-                url: "requisicoes_ajax/requisicao_comentarios.php",
+                url: "requisicoes_ajax/mostrar_comentarios.php",
                 method: "post",
                 data: $("#inserir_comentarios").serialize(),
                 success: function comentarios(data) {
@@ -42,6 +41,19 @@ paginaNoticia($id_noticia);
                 }
             });
         }
+
+
+        $("#btn_remover").click(function() {
+            $.ajax({
+                url: "requisicoes_ajax/remover_noticia.php",
+                method: "post",
+                data: $("#alterar_noticia").serialize(),
+                success: function(data) {
+                    alert('Notícia removida com sucesso');
+                    window.location.href = "area_jornalistas.php";
+                }
+            });
+        });
 
         atualizaNoticia();
     });

@@ -157,3 +157,7 @@ a:hover{
 .borda{
 	border: 1px solid black;
 }
+
+#botao_remover{
+	margin-left: 10px;
+}
