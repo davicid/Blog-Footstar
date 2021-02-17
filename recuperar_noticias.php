@@ -54,7 +54,6 @@ function mostrarNoticias($tipo_noticia)
         while ($noticia = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
             $id_noticia = $noticia['id'];
             echo "<div class='list-group-item'>";
-            echo "<h3 class='list-group-item-heading nome_jornalista'>" . $noticia['nome'] . " <small> - " . $noticia['data_inclusao'] . "</small></h3>";
             echo "<a href='noticia.php?id_noticia=$id_noticia'><h1 class='list-group-item-heading'>" . "<b>" . $noticia["titulo"] . "</b>" . "</h1></a>";
             echo "</div>";
             echo "<br/><br/>";
