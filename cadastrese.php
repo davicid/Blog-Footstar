@@ -1,7 +1,6 @@
 <?php
 
 $erro_usuario = isset($_GET["erro_usuario"]) ? $_GET["erro_usuario"] : 0;
-$erro_email = isset($_GET["erro_email"]) ? $_GET["erro_email"] : 0;
 $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadastrado"] : 0;
 
 ?>
@@ -15,12 +14,18 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
     <title>Blog Footstar</title>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="bootstrap/scss/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
-
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
@@ -68,6 +73,7 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
                     ?>
                 </div>
+
 
                 <div class="form-group">
                     <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
