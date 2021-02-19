@@ -34,7 +34,7 @@ require_once("estilo_pagina/barra_navegacao.php");
 
         function atualizaNoticia() {
             $.ajax({
-                url: "requisicoes_ajax/get_noticias.php",
+                url: "requisicoes_ajax/atualizar_noticias.php",
                 success: function noticias(data) {
                     $("#noticias").html(data);
                 }

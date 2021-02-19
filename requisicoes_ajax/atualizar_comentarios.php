@@ -1,6 +1,5 @@
 <?php
 
-
 require_once("../db.class.php");
 
 $id_noticia = $_POST['id_noticia'];
