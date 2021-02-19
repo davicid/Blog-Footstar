@@ -47,13 +47,13 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
     <?php require_once("estilo_pagina/capa.php") ?>
 
     <section class="container">
-
         <br />
 
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h3>Cadastre-se já.</h3>
             <br />
+            Para a sua própria segurança, evite criar uma conta com o mesmo login e senha do jogo.
             <form method="post" action="registrar_usuario.php">
                 <div class="form-group">
                     <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" placeholder="Nome e Sobrenome" required="requiored">
@@ -67,19 +67,6 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
                     }
 
                     ?>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
-
-                    <?php
-
-                    if ($erro_email) {
-                        echo "<font style='color:#FF0000'>Email já existe</font>";
-                    }
-
-                    ?>
-
                 </div>
 
                 <div class="form-group">
