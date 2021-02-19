@@ -7,7 +7,7 @@ require_once("db.class.php");
 $usuario = $_POST["usuario"];
 $senha = md5($_POST["senha"]);
 
-$sql = "SELECT id, usuario, email, tipo_usuario FROM usuarios where usuario = '$usuario' AND senha = '$senha' ";
+$sql = "SELECT id, usuario, email, tipo_usuario, nome FROM usuarios where usuario = '$usuario' AND senha = '$senha' ";
 
 $objDb = new db();
 $link = $objDb->conecta_mysql();
