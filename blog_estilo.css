@@ -41,8 +41,8 @@ a:hover{
 
 /* ============== Logo =============*/
 .logo{
-	height: 250px;
-	width: 300px;
+	height: 200px;
+	width: 250px;
 }
 
 /* ============== Capa =============*/
@@ -79,35 +79,16 @@ a:hover{
 	display: table;
 	width: 100%;
 	padding-bottom: 30px;
-	padding-left: 70px;
+	padding-left: 60px;
 }
 
 .row a{
-	font-size: 19px;
+	font-size: 16px;
 	padding-left: 70px;
 }
 
 /* ============== posicionamento dos links =============*/
 
-#posicionamento1{
-	margin-left: 35px;
-}
-
-#posicionamento2{
-	margin-left: 35px;
-}
-
-#posicionamento3{
-	margin-left: 100px;
-}
-
-#posicionamento4{
-	margin-left: 20px;
-}
-
-#posicionamento6{
-	margin-left: 55px;
-}
 
 /* ============== Noticias =============*/
 
