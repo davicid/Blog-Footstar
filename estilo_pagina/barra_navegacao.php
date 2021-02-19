@@ -10,7 +10,7 @@
     <link href="bootstrap/scss/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 </head>
 

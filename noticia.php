@@ -65,11 +65,17 @@ paginaNoticia($id_noticia);
         <div class="panel-body">
             <form id="inserir_comentarios" class="input-group-md mb-12">
                 <input type="hidden" id="id_noticia" name="id_noticia" value=<?= $id_noticia ?>>
-                <textarea class="form-control" id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="600" rows="8" cols="65" class="area_comentarios"></textarea>
+                <?php
+                if (isset($_SESSION['usuario'])) {
+                    echo '<textarea class="form-control" id="texto_comentario" name="texto_comentario" placeholder="Insira um comentário" maxlength="600" rows="8" cols="65" class="area_comentarios"></textarea>
                 <br>
                 <spam>
                     <button class="btn btn-primary" id="btn_comentario" type="button">Comentar</button>
-                </spam>
+                </spam>';
+                } else {
+                    echo "Faça o login para poder comentar <b><a href='login.php'>Entrar</a></b>. Caso não tenha uma conta, faça seu cadastro <b><a href='cadastrese.php'>Cadastre-se</a></b>";
+                }
+                ?>
             </form>
         </div>
     </div>
