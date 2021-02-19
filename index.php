@@ -16,44 +16,38 @@ require_once("estilo_pagina/capa.php");
 </section>
 
 <section class="area_secao">
-	<div class="container">
-		<h1 class="titulo_noticias"><b>Últimas Notícias</b></h1>
-		<?php
-		require_once('recuperar_noticias.php');
-		ultimasNoticia();
-		?>
-		<!-- row -->
-		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive">
-					<b id="posicionamento1">Ultimas Atualizações</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive">
-					<b id="posicionamento2">Federação Brasileira</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
-					<b id="posicionamento3">Tutoriais</b></a>
-			</div>
+	<h1 class="titulo_noticias"><b>Últimas Notícias</b></h1>
+	<?php
+	require_once('recuperar_noticias.php');
+	ultimasNoticia();
+	?>
+	<!-- row -->
+	<div class="row">
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive">
+				<b id="posicionamento1">Ultimas Atualizações</b></a>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive">
+				<b id="posicionamento2">Federação Brasileira</b></a>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
+				<b id="posicionamento3">Tutoriais</b></a>
 		</div>
 
-		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
-					<b id="posicionamento4">Competições Nacionais</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive">
-					<b id="posicionamento5">Competições Internacionais</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive">
-					<b id="posicionamento6">Seleção Brasileira</b></a>
-			</div>
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
+				<b id="posicionamento4">Competições Nacionais</b></a>
 		</div>
-
-	</div>
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive">
+				<b id="posicionamento5">Competições Internacionais</b></a>
+		</div>
+		<div class="col-sm-6 col-lg-4">
+			<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive">
+				<b id="posicionamento6">Seleção Brasileira</b></a>
+		</div>
 </section>
 
 <?php require_once("estilo_pagina/rodape.php"); ?>

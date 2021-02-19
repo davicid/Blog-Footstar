@@ -1,6 +1,6 @@
 <footer>
 	<br><br>
-	<div class=" container rodape">
+	<div class="rodape">
 		<spam><b>Blog Footstar<b></spam>
 	</div>
 </footer>
