@@ -1,6 +1,7 @@
 <?php
 
 $erro_usuario = isset($_GET["erro_usuario"]) ? $_GET["erro_usuario"] : 0;
+$erro_email = isset($_GET["erro_email"]) ? $_GET["erro_email"] : 0;
 $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadastrado"] : 0;
 
 ?>
