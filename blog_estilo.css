@@ -135,6 +135,7 @@ a:hover{
 /* ============== Rodapé =============*/
 
 .rodape{
+	width: 100%;
 	background:#324759;
 	text-align: center;
 	vertical-align: middle;
