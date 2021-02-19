@@ -87,12 +87,11 @@ a:hover{
 	padding-left: 70px;
 }
 
-/* ============== Tela de Cadastro ===============*/
+/* ============== Tela de Login e Cadastro ===============*/
 
-.area_cadastro{
-	background: #F2F0F0;
+.area{
+	background-color: white;
 }
-
 
 /* ============== Noticias =============*/
 

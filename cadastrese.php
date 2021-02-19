@@ -29,6 +29,7 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
 </head>
 
+
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="menu_navegacao">
         <div class="navbar-header">
@@ -51,45 +52,56 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
     <?php require_once("estilo_pagina/capa.php") ?>
 
-    <section class="container">
+    <section class="container area">
+
         <br />
-        <div class="area_cadastro">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <h3>Cadastre-se já.</h3>
-                <br />
-                Para a sua própria segurança, evite criar uma conta com o mesmo login e senha do jogo.
-                <br />
-                <form method="post" action="registrar_usuario.php">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" placeholder="Nome e Sobrenome" required="requiored">
-                        <br />
-                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
 
-                        <?php
-
-                        if ($erro_usuario) {
-                            echo "<font style='color:#FF0000'>Usuário já existe</font>";
-                        }
-
-                        ?>
-                    </div>
-
-
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
-                    </div>
-                    <button type="submit" class="btn btn-primary form-control" id="cadastrese">Cadastre-se</button>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h3>Cadastre-se já.</h3>
+            <br />
+            <form method="post" action="registrar_usuario.php">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" placeholder="Nome e Sobrenome" required="requiored">
+                    <br />
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
 
                     <?php
 
-                    if ($usuario_cadastrado) {
-                        echo "<font style='color:green'>Usuário cadastrado com sucesso!</font>";
+                    if ($erro_usuario) {
+                        echo "<font style='color:#FF0000'>Usuário já existe</font>";
                     }
 
                     ?>
-                </form>
-            </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
+
+                    <?php
+
+                    if ($erro_email) {
+                        echo "<font style='color:#FF0000'>Email já existe</font>";
+                    }
+
+                    ?>
+
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
+                </div>
+                <button type="submit" class="btn btn-primary form-control" id="cadastrese">Cadastre-se</button>
+
+                <?php
+
+                if ($usuario_cadastrado) {
+                    echo "<font style='color:green'>Usuário cadastrado com sucesso!</font>";
+                }
+
+                ?>
+            </form>
+
         </div>
         <div class="col-md-4"></div>
 

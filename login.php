@@ -89,7 +89,7 @@ $erro = isset($_GET["erro"]) ? $_GET["erro"] : 0;
     <?php require_once("estilo_pagina/capa.php") ?>
 
 
-    <div class="container">
+    <div class="container area">
         <br />
 
         <div class="col-md-4"></div>
