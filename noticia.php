@@ -81,4 +81,6 @@ paginaNoticia($id_noticia);
     <div id="comentarios"></div>
 </section>
 
+<br><br><br><br><br><br><br>
+
 <?php require_once("estilo_pagina/rodape.php"); ?>

@@ -15,4 +15,5 @@ session_start();
     ?>
 </section>
 
+
 <?php require_once("estilo_pagina/rodape.php"); ?>
