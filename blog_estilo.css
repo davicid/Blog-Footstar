@@ -87,7 +87,11 @@ a:hover{
 	padding-left: 70px;
 }
 
-/* ============== posicionamento dos links =============*/
+/* ============== Tela de Cadastro ===============*/
+
+.area_cadastro{
+	background: #F2F0F0;
+}
 
 
 /* ============== Noticias =============*/
