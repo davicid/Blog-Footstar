@@ -78,7 +78,7 @@ $erro = isset($_GET["erro"]) ? $_GET["erro"] : 0;
     <div class="container area">
         <br />
         <div class="row">
-            <div class="col-md-4"></div>
+            <div class="col-md-3"></div>
             <div class="col-md-4">
                 <ul class="nav navbar-nav">
                     <li class=" <?= $erro == 1 ? 'open' : '' ?>">

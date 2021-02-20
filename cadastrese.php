@@ -46,7 +46,7 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
         <br />
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
             <div class="col-md-7">
                 <h3>Cadastre-se já.</h3>
                 <br />
