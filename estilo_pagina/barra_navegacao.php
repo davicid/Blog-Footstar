@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light fixed-top navbar-expand-lg" id="menu_navegacao">
+    <nav class="navbar navbar-light fixed-top navbar-expand-xl" id="menu_navegacao">
         <h1><b id="blog_logo">Blog Footstar</b></h1>
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu_nav">
             <span class="sr-only">Alternar Menu</span>
