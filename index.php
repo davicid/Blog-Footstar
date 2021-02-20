@@ -23,32 +23,32 @@ require_once("estilo_pagina/capa.php");
 	?>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive">
-					<b id="posicionamento1">Ultimas Atualizações</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive">
-					<b id="posicionamento2">Federação Brasileira</b></a>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive">
-					<b id="posicionamento3">Tutoriais</b></a>
+
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive"><b>Ultimas Atualizações</b></a>
 			</div>
 
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive">
-					<b id="posicionamento4">Competições Nacionais</b></a>
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive"><b>Federação Brasileira</b></a>
 			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive">
-					<b id="posicionamento5">Competições Internacionais</b></a>
+
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive"><b>Tutoriais</b></a>
 			</div>
-			<div class="col-sm-6 col-lg-4">
-				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive">
-					<b id="posicionamento6">Seleção Brasileira</b></a>
+
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive"><b>Competições Nacionais</b></a>
+			</div>
+
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive"><b>Competições Internacionais</b></a>
+			</div>
+
+			<div class="col-xl-4 col-lg-6 col-md-7">
+				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive tamanho_letra"><b>Seleção Brasileira</b></a>
 			</div>
 		</div>
+	</div>
 </section>
 
 <?php require_once("estilo_pagina/rodape.php"); ?>
