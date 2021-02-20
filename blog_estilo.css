@@ -34,7 +34,7 @@ a:hover{
 /* ============== Logo =============*/
 .logo{
 	height: 250px;
-	width: 250px;
+	width: 290px;
 }
 
 /* ============== Capa =============*/
@@ -70,7 +70,7 @@ a:hover{
 
 .row{
 	width: 100%;
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .row a{
