@@ -15,6 +15,8 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
     <title>Blog Footstar</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
@@ -49,10 +51,14 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
             <div class="col-md-6">
                 <h3>Cadastre-se já.</h3>
                 <br />
+                <b>Para a sua própria segurança, evite usar o mesmo login e senha do jogo</b>
+                <br />
                 <form method="post" action="registrar_usuario.php">
                     <div class="form-group">
                         <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" placeholder="Nome e Sobrenome" required="requiored">
-                        <br />
+                    </div>
+
+                    <div class="form-group">
                         <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
 
                         <?php

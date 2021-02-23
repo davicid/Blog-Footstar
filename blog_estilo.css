@@ -31,11 +31,6 @@ a:hover{
 	color: #F2F0F0;
 	font-family: "Times New Roman", Times, serif;
 }
-/* ============== Logo =============*/
-.logo{
-	height: 250px;
-	width: 290px;
-}
 
 /* ============== Capa =============*/
 
@@ -69,12 +64,11 @@ a:hover{
 }
 
 .row{
-	width: 100%;
-	padding-left: 30px;
+	padding-left: 20px;
 }
 
 .row a{
-	font-size: 26px;
+	font-size: 20px;
 }
 
 /* ============== Tela de Login e Cadastro ===============*/

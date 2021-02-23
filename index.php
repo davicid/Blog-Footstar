@@ -9,9 +9,16 @@ require_once("estilo_pagina/capa.php");
 <section class="area_secao">
 	<div class="container area_introducao">
 		<h1><b>Introdução ao Footstar</b></h1>
-		<p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium congue est nec vestibulum. Etiam malesuada congue arcu, et sodales purus pulvinar at. Donec vel velit vitae nulla consectetur pharetra. Mauris lacinia nec nulla in aliquet. Sed ultrices eros et eros mollis auctor. Phasellus ac euismod augue. Mauris vitae ipsum ornare, eleifend lacus ut, luctus neque. Suspendisse potenti. Pellentesque elementum sodales fringilla. Mauris non risus maximus, viverra est ac, auctor odio. Donec pharetra efficitur libero et pharetra. Quisque maximus et odio vitae sodales. Fusce in mi turpis.</b></p>
-		<p><b>Praesent vel lobortis sapien. Sed sed dui molestie, tempus odio vitae, rhoncus ligula. Cras in maximus lacus. Donec a nibh condimentum, aliquam eros eget, porttitor eros. Pellentesque luctus bibendum mauris. Nam facilisis massa ligula, sit amet semper nulla cursus at. Donec ut vulputate felis, non cursus ex. Donec tellus nisi, imperdiet a nibh ac, suscipit malesuada nibh. Proin laoreet nisi vel dui tristique, nec ullamcorper est tincidunt. Ut ultricies, augue nec accumsan tempus, metus neque iaculis nulla, nec commodo arcu massa vel nulla.</b></p>
-		<p><b>Quisque sit amet cursus leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus placerat, risus sed maximus congue, purus erat ornare massa, tempor euismod neque risus non orci. Suspendisse sed urna quis ex gravida tempus. In luctus pharetra nulla, eget molestie dolor sodales non. Duis quis massa ex. Etiam scelerisque massa quis accumsan sagittis. Nullam ut massa nisl. Aenean bibendum dui tincidunt aliquam placerat. Praesent tempor quam quis pretium eleifend. Mauris eu nisi mattis, fringilla dolor vulputate, pulvinar risus. Aliquam erat volutpat. Donec suscipit tortor ac libero scelerisque consectetur. Etiam in nisi at quam facilisis pulvinar. Nulla eget ante vitae sapien fermentum convallis sit amet non leo.</b></p>
+		<p><b>Footstar (Planetarium Football Star) é um jogo online onde você está no controle de um jogador de futebol, tentando se tornar o melhor jogador que o planeta já viu.</b></p>
+
+		<p><b>Sua tarefa básica é treinar o seu player o melhor que puder. Isto irá permitir você jogar nas melhores equipes e, portanto, tenha um bom contrato que lhe permitirá pagar por um melhor estilo de vida e itens de jogos. Você também deve ter uma boa relação com o seu treinador para que você possa ter a chance de jogar tanto quanto você puder.</b></p>
+
+		<p><b>Você também pode interagir com seus companheiros de equipe e viver a química da equipe e emoção de competir no campeonato, taça nacional e competições internacionais junto com eles. Quanto mais você joga, mais experiência você vai ganhar e assim você vai jogar ainda melhor. Torne-se um dos melhores do seu país para jogar pela sua seleção nacional, assim você pode ter a chance de levar o seu país para a Copa do Mundo e ganhá-la.</b></p>
+
+		<p><b>Somente as melhores performances vão levar você para o reconhecimento internacional entre os vários outros jogadores ao redor do globo.</b></p>
+
+		<p><b>Você pode logar todos os dias para acompanhar a evolução do seu jogador e obter cada vez mais conquistas.<b></p>
+
 	</div>
 </section>
 
@@ -28,27 +35,27 @@ require_once("estilo_pagina/capa.php");
 		<div class="row">
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="logo img-responsive"><b>Ultimas Atualizações</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Ultimas Atualizações'"><img src="imagens/tutoriais.png" class="img-fluid"><b>Ultimas Atualizações</b></a>
 			</div>
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="logo img-responsive"><b>Federação Brasileira</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Federação Brasileira'"><img src="imagens/fede_br.png" class="img-fluid"><b>Federação Brasileira</b></a>
 			</div>
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="logo img-responsive"><b>Tutoriais</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Tutoriais'"><img src="imagens/ultimas_atualizacoes.png" class="img-fluid"><b>Tutoriais</b></a>
 			</div>
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="logo img-responsive"><b>Competições Nacionais</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Competições Nacionais'"><img src="imagens/comp_nacionais.png" class="img-fluid"><b>Competições Nacionais</b></a>
 			</div>
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="logo img-responsive"><b>Competições Internacionais</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Competições Internacionais'"><img src="imagens/comp_internacionais.png" class="img-fluid"><b>Competições Internacionais</b></a>
 			</div>
 
 			<div class="col-xl-4 col-lg-4 col-md-6">
-				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="logo img-responsive tamanho_letra"><b>Seleção Brasileira</b></a>
+				<a href="mostrar_noticias.php?tipo_noticia='Seleção Brasileira'"><img src="imagens/sele_br.png" class="img-fluid"><b>Seleção Brasileira</b></a>
 			</div>
 		</div>
 	</div>
