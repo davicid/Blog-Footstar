@@ -17,10 +17,13 @@ require_once("estilo_pagina/capa.php");
 
 <section class="area_secao">
 	<h1 class="titulo_noticias"><b>Últimas Notícias</b></h1>
-	<?php
-	require_once('recuperar_noticias.php');
-	ultimasNoticia();
-	?>
+	<br>
+	<div class="container">
+		<?php
+		require_once('recuperar_noticias.php');
+		ultimasNoticia();
+		?>
+	</div>
 	<div class="container">
 		<div class="row">
 

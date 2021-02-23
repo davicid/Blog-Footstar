@@ -1,4 +1,5 @@
 <?php
+
 require_once("../db.class.php");
 
 $objDb = new db();

@@ -26,8 +26,8 @@ function paginaNoticia($id_noticia)
                 echo "<form id='alterar_noticia'>";
                 echo "<input type='hidden' id='noticia_ativa' name='noticia_ativa' value = 0>";
                 echo "<input type='hidden' id='id_noticia' name='id_noticia' value = '$id_noticia'>";
-                echo "<a href='editar.php?id_noticia=$id_noticia'<button class='btn btn-link' id='btn_editar' type='submit' value ='$id_noticia'>Editar</button></a>";
-                echo "<a href='#'<button class='btn btn-link' id='btn_remover' type='button'>Apagar</button></a>";
+                echo "<a href='editar.php?id_noticia=$id_noticia'><button class='btn btn-link' id='btn_editar' type='button' value ='$id_noticia'>Editar</button></a>";
+                echo "<a href='#'><button class='btn btn-link' id='btn_remover' type='button'>Apagar</button></a>";
                 echo "</form>";
             }
             echo "</div>";

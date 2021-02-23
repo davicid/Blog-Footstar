@@ -25,6 +25,7 @@ paginaNoticia($id_noticia);
                     data: $("#inserir_comentarios").serialize(),
                     success: function(data) {
                         $("#texto_comentario").val("");
+                        atualizarComentarios();
                     }
                 });
             }
@@ -37,7 +38,6 @@ paginaNoticia($id_noticia);
                 data: $("#inserir_comentarios").serialize(),
                 success: function comentarios(data) {
                     $("#comentarios").html(data);
-                    atualizarComentarios();
                 }
             });
         }
@@ -45,7 +45,7 @@ paginaNoticia($id_noticia);
 
         $("#btn_remover").click(function() {
             $.ajax({
-                url: "requisicoes_ajax/remover_noticia.php",
+                url: "requisicoes_ajax/apagar_noticia.php",
                 method: "post",
                 data: $("#alterar_noticia").serialize(),
                 success: function(data) {

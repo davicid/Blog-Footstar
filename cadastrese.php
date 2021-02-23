@@ -15,8 +15,6 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
     <title>Blog Footstar</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="blog_estilo.css">
 
@@ -25,29 +23,30 @@ $usuario_cadastrado = isset($_GET["usuario_cadastrado"]) ? $_GET["usuario_cadast
 
 <body>
     <nav class="navbar navbar-light fixed-top navbar-expand-lg" id="menu_navegacao">
-        <h3><b id="blog_logo">Blog Footstar</b></h3>
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu_nav">
-            <span class="sr-only">Alternar Menu</span>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        </div>
+        <div class="container">
+            <h3><b id="blog_logo">Blog Footstar</b></h3>
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu_nav">
+                <span class="sr-only">Alternar Menu</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div id="navbar" class="collapse navbar-collapse">
-            <div class="navbar-nav ml-auto">
-                <a href="index.php"><b>Página Inicial</b></a>
-                <a href="login.php"><b>Entrar</b></a>
+            <div id="navbar" class="collapse navbar-collapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="index.php"><b>Página Inicial</b></a>
+                    <a href="login.php"><b>Entrar</b></a>
+                </div>
             </div>
         </div>
     </nav>
 
     <?php require_once("estilo_pagina/capa.php") ?>
 
-    <section class="container area">
+    <section class="area">
 
         <br />
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-7">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <h3>Cadastre-se já.</h3>
                 <br />
                 <form method="post" action="registrar_usuario.php">
