@@ -31,14 +31,19 @@
 
                     <?php if (isset($_SESSION["usuario"]) && (($_SESSION["tipo_usuario"] == "jornalista") || ($_SESSION["tipo_usuario"] == "administrador"))) {
                         echo '<a class="nav-link" href="area_jornalistas.php"><b>Área de Jornalistas</b></a></li>';
-                    } ?>
+                    }
+                    if (isset($_SESSION["usuario"]) && ($_SESSION["tipo_usuario"] == "administrador")) {
+                        echo '<a class="nav-link" href="area_administrador.php"><b>Área de Administrador</b></a></li>';
+                    }
 
-                    <?php if (!isset($_SESSION["usuario"])) {
+                    if (!isset($_SESSION["usuario"])) {
                         echo '<a class="nav-link" href="cadastrese.php"><b>Cadastre-se</b></a></li>
                           <a class="nav-link" href="login.php"><b>Entrar</b></a></li>';
                     } else {
                         echo '<a class="nav-link" href="estilo_pagina/sair.php"><b>Sair</b></a></li>';
-                    } ?>
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>

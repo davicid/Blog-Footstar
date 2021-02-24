@@ -9,6 +9,9 @@ if (!isset($_SESSION["usuario"]) || !($_SESSION["tipo_usuario"] == "administrado
 require_once("estilo_pagina/barra_navegacao.php");
 ?>
 
-Ainda em contrução
+<br><br><br><br><br><br>
+<div class="container">
+    <h1>Ainda em contrução</h1>
+</div>
 
 <?php require_once("estilo_pagina/rodape.php"); ?>
