@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION["usuario"]) || (!($_SESSION["tipo_usuario"] == "jornalista") && !($_SESSION["tipo_usuario"] == "administrador"))) {
+if (!isset($_SESSION["usuario"]) && ((!($_SESSION["tipo_usuario"] == "jornalista") || !($_SESSION["tipo_usuario"] == "administrador")))) {
     header("Location: index.php?erro=1");
 }
 

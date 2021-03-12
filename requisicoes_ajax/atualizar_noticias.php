@@ -5,7 +5,7 @@ require_once("../db.class.php");
 $objDb = new db();
 $link = $objDb->conecta_mysql();
 
-$sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.ativo = 1 ORDER BY data_inclusao DESC";
+$sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.ativo = 1 ORDER BY n.data_inclusao DESC";
 
 $resultado = mysqli_query($link, $sql);
 

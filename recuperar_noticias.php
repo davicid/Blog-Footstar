@@ -7,7 +7,7 @@ function paginaNoticia($id_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY n.data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -45,7 +45,7 @@ function mostrarNoticias($tipo_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.id, n.titulo, n.texto_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND tipo_noticia = $tipo_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.id, n.titulo, n.texto_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND tipo_noticia = $tipo_noticia AND n.ativo = 1 ORDER BY n.data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -70,7 +70,7 @@ function editarNoticia($id_noticia)
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY data_inclusao DESC";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.id = $id_noticia AND n.ativo = 1 ORDER BY n.data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
@@ -119,7 +119,7 @@ function ultimasNoticia()
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.ativo = 1 ORDER BY data_inclusao DESC";
+    $sql = "SELECT DATE_FORMAT(n.data_inclusao, '%d %b %Y %T') AS data_inclusao, n.titulo, n.texto_noticia, n.id, n.tipo_noticia, u.usuario, u.nome FROM noticias AS n JOIN usuarios AS u WHERE n.id_usuario = u.id AND n.ativo = 1 ORDER BY n.data_inclusao DESC";
 
     $resultado = mysqli_query($link, $sql);
 
